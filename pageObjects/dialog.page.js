@@ -2,12 +2,13 @@ class Dialog {
   /**
    * Define Elements
    */
+   //Use ~ to find element by accessibility id
   get appBtn() {return $("~App");}
   get alertDialogBtn() {return $('//android.widget.TextView[@content-desc="Alert Dialogs"]');}
   get textEntryDialogBtn() {return $('//android.widget.Button[@content-desc="Text Entry dialog"]');}
   get userNameField() {return $('//android.widget.EditText[@resource-id="io.appium.android.apis:id/username_edit"]');}
+//  Add // before the class name 'android.widget.EditText' then add other attributes like resource-id and its value in [] to build the xpath [@resource-id="io.appium.android.apis:id/password_edit"]
   get passwordField() {return $('//android.widget.EditText[@resource-id="io.appium.android.apis:id/password_edit"]');}
-
   get dialogOkBtn() {return $('//android.widget.Button[@resource-id="android:id/button1"]');}
   get dialogCancelBtn() {return $('//android.widget.Button[@resource-id="android:id/button2"]');}
 
@@ -15,6 +16,7 @@ class Dialog {
   get tabsBtn() {return $('//android.widget.TextView[@content-desc="Tabs"]')};
   get contentByIdBtn() {return $('//android.widget.TextView[@content-desc="1. Content By Id"]')};
 
+// to find all elements in one, we can use class name and start with $$ to get all elements in the class
   get tabs() {return $$('android.widget.LinearLayout')};
   get tab1Details() {return $('~tab1')};
   get tab2Details() {return $('~tab2')};

@@ -41,7 +41,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 1,
+    maxInstances: 10,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -49,7 +49,7 @@ exports.config = {
     //
     capabilities: [{
         platformName: 'Android',
-        'appium:deviceName': 'Pixel 2',
+        'appium:deviceName': 'Pixel 2 API 30',
         'appium:app': join(process.cwd(), './ApiDemos-debug.apk')
     }],
     //
@@ -89,7 +89,7 @@ exports.config = {
     waitforTimeout: 10000,
     //
     // Default timeout in milliseconds for request
-    // if Selenium Grid doesn't send response
+    // if browser driver or grid doesn't send response
     connectionRetryTimeout: 90000,
     //
     // Default request retries count
